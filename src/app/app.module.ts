@@ -8,19 +8,25 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+// pipes
+import { PlaceHolderPipe } from './pipes/placeholder.pipe';
+
 // servicios
 import { ListaDeseosService } from './services/lista-deseos.service';
 
 // componentes
 import { PendientesComponent } from '../pages/pendientes/pendientes.component';
 import { TerminadosComponent } from '../pages/terminados/terminados.component';
+import { AgregarComponent } from '../pages/agregar/agregar.component';
 
 @NgModule({
   declarations: [
     MyApp,
     TabsPage,
+    PlaceHolderPipe,
     PendientesComponent,
-    TerminadosComponent
+    TerminadosComponent,
+    AgregarComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +37,8 @@ import { TerminadosComponent } from '../pages/terminados/terminados.component';
     MyApp,
     TabsPage,
     PendientesComponent,
-    TerminadosComponent
+    TerminadosComponent,
+    AgregarComponent
   ],
   providers: [
     StatusBar,
