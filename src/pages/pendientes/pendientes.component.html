@@ -25,14 +25,15 @@
     </ion-item>
 
     <ion-list>
-      <ion-item *ngFor="let item of lista.items | slice:0:2"  (click)="verDetalle(lista, i)">
+      <ion-item *ngFor="let item of (expanded ? lista.items : (lista.items | slice:0:2))"  (click)="verDetalle(lista, i)">
         <ion-icon *ngIf="!item.completo" ios="ios-square-outline" md="md-square-outline"></ion-icon>
         <ion-icon *ngIf="item.completo" ios="ios-checkbox-outline" md="md-checkbox-outline"></ion-icon>
         {{ item.nombre }}
       </ion-item>
 
-      <ion-item class="text-center" *ngIf="lista.items.length > 2">
-        <ion-icon color="primary" ios="ios-arrow-dropdown" md="md-arrow-dropdown"></ion-icon>
+      <ion-item class="text-center" *ngIf="lista.items.length > 2" (click)="expanded = !expanded">
+        <ion-icon *ngIf="!expanded" color="primary" ios="ios-arrow-dropdown" md="md-arrow-dropdown"></ion-icon>
+        <ion-icon *ngIf="expanded"  color="primary" ios="ios-arrow-dropup"   md="md-arrow-dropup"  ></ion-icon>
       </ion-item>
     </ion-list>
   </ion-card>

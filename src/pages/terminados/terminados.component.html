@@ -25,7 +25,7 @@
     </ion-item>
 
     <ion-list>
-      <ion-item [class.my-animation]="expanded" *ngFor="let item of (expanded ? lista.items : (lista.items | slice:0:2))"  (click)="verDetalle(lista, i)">
+      <ion-item *ngFor="let item of (expanded ? lista.items : (lista.items | slice:0:2))"  (click)="verDetalle(lista, i)">
         <ion-icon *ngIf="!item.completo" ios="ios-square-outline" md="md-square-outline"></ion-icon>
         <ion-icon *ngIf="item.completo" ios="ios-checkbox-outline" md="md-checkbox-outline"></ion-icon>
         {{ item.nombre }}

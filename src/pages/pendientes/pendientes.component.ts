@@ -14,6 +14,8 @@ export class PendientesComponent implements OnInit {
 
   ngOnInit() {}
 
+  expanded: boolean = false;
+
   irAgregar() {
     this.navCtrl.push(AgregarComponent);
   }
