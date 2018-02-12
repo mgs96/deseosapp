@@ -1,4 +1,4 @@
-<ion-tabs color="primary">
-  <ion-tab [root]="tab1Root" tabTitle="Pendientes" tabIcon="home"></ion-tab>
-  <ion-tab [root]="tab2Root" tabTitle="Terminados" tabIcon="information-circle"></ion-tab>
-</ion-tabs>
+<super-tabs toolbarBackground="primary" toolbarColor="light" [config]="{ sideMenu: 'left' }" tabsPlacement="bottom">
+  <super-tab [root]="tab1Root" title="Pendientes" icon="home"></super-tab>
+  <super-tab [root]="tab2Root" title="Terminados" icon="information-circle"></super-tab>
+</super-tabs>
